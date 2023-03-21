@@ -14,4 +14,4 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-Route::get('/', [PublicController::class, 'homepage'])->name('homepage')->name('homepage');
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
