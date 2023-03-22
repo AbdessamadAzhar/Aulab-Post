@@ -13,19 +13,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                @Auth
+                @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/">profilo</a></li>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/">Profilo</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.queryselector('#form-logout').submit();">Logout</a></li>
-                            <form method = "POST" action="{{ route('logout') }}" id="form-logout" class="d-none">
+                            <li><a class="dropdown-item" href="#"
+                                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                            </li>
+                            <form method="post" action="{{ route('logout') }}" id="form-logout" class="d-none">
                                 @csrf
                             </form>
                         </ul>
@@ -33,11 +36,11 @@
                 @endauth
                 @guest
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Benvenuto
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Benvenuto ospite
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                         </ul>
