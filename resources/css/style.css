@@ -1,3 +1,7 @@
+.header{
+    background-color: #6db784;
+
+}
 .montfont {
     font-family: 'Montserrat', sans-serif;
 }
@@ -15,4 +19,5 @@
 
     --c-4: #ffffff;
 }
+
 

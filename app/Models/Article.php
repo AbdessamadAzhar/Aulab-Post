@@ -13,7 +13,7 @@ class Article extends Model
         'title',
         'subtitle',
         'body',
-        'immage',
+        'image',
         'user_id',
         'category_id'
     ];
