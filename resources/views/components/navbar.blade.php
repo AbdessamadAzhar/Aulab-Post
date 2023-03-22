@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info text-white ">
+<nav class="navbar navbar-expand-lg bg-info text-white larafont">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -24,7 +24,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.queryselector('#form-logout').submit()";>Logout</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.queryselector('#form-logout').submit();">Logout</a></li>
                             <form method = "POST" action="{{ route('logout') }}" id="form-logout" class="d-none">
                                 @csrf
                             </form>

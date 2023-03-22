@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-header>
-        The Aulab Post
+        Aulab Post!
     </x-header>
     
 </x-layout>
