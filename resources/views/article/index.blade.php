@@ -16,13 +16,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $article->title }}</h5>
                             <p class="card-text">{{ $article->subtitle }}</p>
-                            <p class="small text-muted fst-italic text-capitalized">{{ $article->category->name }}</p>
+                            <a href="{{route('article.byCategory', ['category'=>$article->category->id])}}" class="small text-muted fst-italic text capitalize">{{$article->category->name}}</a>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-beetween align-items-center">
                             Redatto il {{$article->created_at->format('d/m/y')}} da {{$article->user->name}}
                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
-                            <a href="{{route('article.byCategory', ['category'=>$article->category->id])}}" class="small text-muted fst-italic text capitalize">{{$article->category->name}}</a>
+                            
 </div>
                     </div>
                 </div>
