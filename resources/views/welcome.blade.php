@@ -22,13 +22,14 @@
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-beetween align-items-center">
                             Redatto il {{$article->created_at->format('d/m/y')}} da {{$article->user->name}}
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a> 
+                            <a href="{{route('article.byCategory', ['category'=>$articles->category->id])}}" class="small text-muted fst-italic text capitalize">{{$article->category->id}}</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-    </div>
+    </div> 
 
 
 </x-layout>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -88,4 +89,9 @@ class ArticleController extends Controller
     {
         //
     }
+    public function byCategory(Category $category){
+        $articles = $category->articles->sortByDesc('created_at');
+        return view('article.by-category', compact('category', 'articles')); 
+    }
 }
+
