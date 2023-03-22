@@ -1,0 +1,17 @@
+.montfont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lorafont {
+    font-family: 'Lora', serif;
+}
+
+:root {
+    --c-1: #1b4d89;
+
+    --c-2: #f9e45b;
+
+    --c-3: #6db784;
+
+    --c-4: #ffffff;
+}
