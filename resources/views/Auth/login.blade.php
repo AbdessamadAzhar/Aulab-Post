@@ -34,7 +34,7 @@
                   
                     <div class="mt-2">
                         <button class="btn bg-info text-white">Accedi</button>
-                        <p class="small mt-2">Non sei registrato? <a href="{{route('login')}}">Clicca qui</a></p>
+                        <p class="small mt-2">Non sei registrato? <a href="{{route('register')}}">Clicca qui</a></p>
                     </div>
                 </form>
             </div>
