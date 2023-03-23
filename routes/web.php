@@ -16,6 +16,7 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 
 
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
