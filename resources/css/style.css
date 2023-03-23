@@ -10,6 +10,14 @@
     font-family: 'Lora', serif;
 }
 
+.fs-main{
+    background-color: var(--c-1);
+}
+
+.fs-sec{
+    background-color: var(--c-2);
+}
+
 :root {
     --c-1: #1b4d89;
 
