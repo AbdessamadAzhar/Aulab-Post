@@ -18,7 +18,8 @@
                             <p class="card-text">{{ $article->subtitle }}</p>
                             <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                 class="small text-muted fst-italic text capitalize">{{ $article->category->name }}</a>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{ route('article.byUser', ['user' => $article->user->id]) }}"
+                                class="small text-muted fst-italic text capitalize">{{ $article->user->name }}</a>
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-beetween align-items-center">
                             Redatto il {{ $article->created_at->format('d/m/y') }} da {{ $article->user->name }}
