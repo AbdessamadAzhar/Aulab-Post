@@ -12,4 +12,25 @@ class PublicController extends Controller
     return view('welcome', compact('articles'));
     }
 
-}
+    public function __construct(){
+        $this->middleware('auth')->except('homepage');
+
+    }
+        public function careers(){
+            return view('careers');
+        }
+
+        public function careersSubmit(Request $request){
+            $request->validate([
+
+                'role' => 'required',
+                'email' => 'required',
+                'message' => 'required',
+            ]);
+        }
+
+    }
+
+
+
+
