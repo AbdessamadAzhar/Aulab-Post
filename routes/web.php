@@ -29,5 +29,6 @@ Route::get('/article/category/{category}',[ArticleController::class,'byCategory'
 Route::get('/article/user/{user}',[ArticleController::class,'byUser'])->name('article.byUser');
 
 Route::middleware('admin')->group(function(){
+    
     Route::get('\admin\dashboard',[AdminController::class, 'dashboard'])->name('Admin.dashboard');
 });
