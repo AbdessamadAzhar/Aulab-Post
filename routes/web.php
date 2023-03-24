@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
@@ -28,5 +29,5 @@ Route::get('/article/category/{category}',[ArticleController::class,'byCategory'
 Route::get('/article/user/{user}',[ArticleController::class,'byUser'])->name('article.byUser');
 
 Route::middleware('admin')->group(function(){
-    Route::get('\admin\dashboard')
-})
+    Route::get('\admin\dashboard',[AdminController::class, 'dashboard'])->name('Admin.dashboard');
+});
