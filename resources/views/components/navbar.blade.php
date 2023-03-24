@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-info text-white larafont">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('homepage') }}">Navbar</a>
+        <a class="navbar-brand" href="{{ route('homepage') }}">Aulab Post</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,10 +11,10 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
+                    <a class="nav-link" href="{{ route('article.create') }}">Inserisci un articolo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('careers')}}">Lavora con noi </a>
+                    <a class="nav-link" href="{{ route('careers') }}">Lavora con noi </a>
                 </li>
                 @auth
                     <li class="nav-item dropdown">
@@ -22,9 +22,14 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
-
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/">Profilo</a></li>
+                            @if (Auth::user()->is_admin)
+                                <li><a class="dropdown-item"href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                            @endif
+                            @if (Auth::user()->is_revisor)
+                            <li><a class="dropdown-item"href="{{ route('revisor.dashboard') }}">Dashboard Del revisore</a></li>
+                        @endif
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -34,6 +39,7 @@
                             <form method="post" action="{{ route('logout') }}" id="form-logout" class="d-none">
                                 @csrf
                             </form>
+
                         </ul>
                     </li>
                 @endauth
