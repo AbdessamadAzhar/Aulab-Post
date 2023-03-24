@@ -21,6 +21,7 @@ class PublicController extends Controller
     {
         $this->middleware('auth')->except('homepage');
     }
+    
     public function careers()
     {
         return view('careers');

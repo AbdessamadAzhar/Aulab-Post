@@ -20,8 +20,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        
+        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,        
     ];
 
     /**
@@ -54,6 +53,9 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
+        'admin' =>\app\Http\Middleware\UserIsAdmin::class,
+        'revisor' =>\app\Http\Middleware\UserIsRevisor::class,
+        'writer' =>\app\Http\Middleware\UserIsWriter::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
@@ -64,8 +66,6 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'admin' =>\app\Http\Middleware\UserIsAdmin::class,
-        'revisor' =>\app\Http\Middleware\UserIsRevisor::class,
-        'writer' =>\app\Http\Middleware\UserIsWriter::class,
+        
     ];
 }

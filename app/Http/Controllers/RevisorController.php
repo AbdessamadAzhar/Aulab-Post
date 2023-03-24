@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class RevisorController extends Controller
 {
+    
+    
     public function dashboard()
     {
         $unrevisionedArticles = Article::where('is_accepted', NULL)->get();
