@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('careers')}}">Lavora con noi </a>
+                </li>
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
