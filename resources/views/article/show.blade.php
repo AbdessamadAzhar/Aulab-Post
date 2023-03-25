@@ -16,16 +16,16 @@
             </div>
             <hr>
             <p>{{ $article->body }}</p>
+            @if (Auth::user($article->is_revisor))
+                <a href="{{ route('revisor.acceptArticle', compact('article')) }}"class="btn btn-success text-white my-5">Accetta
+                    l'articolo</a>
+                <a
+                    href="{{ route('revisor.rejectArticle', compact('article')) }}"class="btn btn-danger text-white my-5">Rifiuta
+                    l'articolo</a>
+            @endif
             <div class="text-center">
                 <a href="{{ route('article.index') }}" class="btn btn-info text-white my-5">Torna indietro</a>
-                @if (Auth::user($article->is_revisor))
-                    <a
-                        href="{{ route('revisor.acceptArticle', compact('article')) }}"class="btn btn-success text-white my-5">Accetta
-                        l'articolo</a>
-                    <a
-                        href="{{ route('revisor.rejectArticle', compact('article')) }}"class="btn btn-danger text-white my-5">Rifiuta
-                        l'articolo</a>
-                @endif
+
             </div>
         </div>
     </div>
