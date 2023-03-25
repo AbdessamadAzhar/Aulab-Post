@@ -34,28 +34,3 @@
      </div>
      
 </x-layout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-12">
-    <h2>Richieste per il ruolo amministratore</h2>
-    <x-requests-table :roleRequests="$adminRequests" role="amministratore"/>
-</div>
-</div>

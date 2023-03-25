@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WriterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +51,8 @@ Route::middleware('revisor')->group(function(){
 
 Route::middleware('writer')->group(function(){
 
-    Route::get('/article/create',[ArticleController::class, 'create'])->name('article.create');
-    Route::post('/article/store',[ArticleController::class, 'store'])->name('article.store');
-        
+    Route::get('/writer/dashboard',[WriterController::class, 'dashboard'])->name('writer.dashboard');
+    Route::get('/writer/{article}/accepted',[writerController::class, 'acceptArticle'])->name('writer.acceptArticle');
+    Route::get('/writer/{article}/rejected',[WriterController::class, 'rejectArticle'])->name('writer.rejectArticle');
+    Route::get('/writer/{article}/undo',[WriterController::class, 'undoArticle'])->name('writer.undoArticle');
 });
