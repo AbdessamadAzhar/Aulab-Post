@@ -1,6 +1,10 @@
-.header{
-    background-color: #6db784;
+.nav{
+     color:  #1b4d89;
+}
 
+
+.header{
+    background-color:  #6db784;
 }
 .montfont {
     font-family: 'Montserrat', sans-serif;
@@ -10,13 +14,6 @@
     font-family: 'Lora', serif;
 }
 
-.f-main{
-    background-color: var(--c-1);
-}
-
-.f-sec{
-    background-color: var(--c-2);
-}
 
 :root {
     --c-1: #1b4d89;
@@ -28,4 +25,34 @@
     --c-4: #ffffff;
 }
 
+.tx-1 {
+    color: var(--c-1);
+}
 
+.tx-2 {
+    color: var(--c-2);
+}
+
+.tx-3 {
+    color: var(--c-3);
+}
+
+.tx-4{
+    color: var(--c-4);
+}
+
+.bg-1 {
+    color: var(--c-1);
+}
+
+.bg-2 {
+    color: var(--c-2);
+}
+
+.bg-3 {
+    color: var(--c-3);
+}
+
+.bg-4 {
+    color: var(--c-4);
+}

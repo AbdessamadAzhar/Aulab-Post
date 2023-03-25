@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        Bentornato, Revisore
+        Bentornato, Redattore
     </x-header>
 
     @if (session('message'))
@@ -35,5 +35,7 @@
             </div>
 
 </x-layout>
+
+
 
 

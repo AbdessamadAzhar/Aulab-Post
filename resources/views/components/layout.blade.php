@@ -13,7 +13,7 @@
     <title>The Aulab Post</title>
 </head>
 
-<body>
+<body style="background:#6db784">
 
     <x-navbar />
 
