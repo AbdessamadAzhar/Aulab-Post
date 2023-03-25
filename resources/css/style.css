@@ -1,5 +1,8 @@
 .nav{
-     color:  #1b4d89;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1px;   
+    color:  #1b4d89;
 }
 
 

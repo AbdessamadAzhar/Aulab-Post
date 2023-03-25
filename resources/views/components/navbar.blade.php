@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg header larafont">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('homepage') }}">OneClick.it 
-        <img src="./media/arrow_mouse/200" alt=""></a>
+        <a class="navbar-brand" href="{{ route('homepage') }}">OneClick.it
+            <img src="./media/arrow_mouse/200" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,10 +31,6 @@
                             @if (Auth::user()->is_revisor)
                                 <li><a class="dropdown-item"href="{{ route('revisor.dashboard') }}">Dashboard Del
                                         revisore</a></li>
-                            @endif
-                            @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item"href="{{ route('writer.dashboard') }}">Dashboard Del
-                                        redattore</a></li>
                             @endif
                             <li>
                                 <hr class="dropdown-divider">
