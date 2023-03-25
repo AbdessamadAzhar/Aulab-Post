@@ -5,7 +5,7 @@
         </div>
     @endif
     <x-header>
-        Aulab Post!
+        OneClick.it
     </x-header>
 
     <div class="container my-5">
