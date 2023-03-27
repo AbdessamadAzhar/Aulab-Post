@@ -13,7 +13,7 @@
     <title>OneClick</title>
 </head>
 
-<body style="background:#6db784">
+<body>
 
     <x-navbar />
 
