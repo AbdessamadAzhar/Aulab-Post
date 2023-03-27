@@ -11,7 +11,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::table('users', function (Blueprint $table) {
             
@@ -20,9 +20,7 @@ return new class extends Migration
             $table->boolean('is_writer')->after('is_revisor')->nullable()->default(false);
         });
 
-
-
-
+       
 
 
     }
@@ -33,9 +31,10 @@ return new class extends Migration
 
 
 
-    public function down(): void
+    public function down()
     {
        
+        User::where('email', 'admin@theaulabpost')->delete();
 
         Schema::table('users', function (Blueprint $table){
             $table->dropColumn(['is_admin', 'is_revisor', 'is_writer']);
