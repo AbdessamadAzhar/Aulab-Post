@@ -92,9 +92,7 @@ class ArticleController extends Controller
         //
     }
     public function byCategory(Category $category){
-        $articles = $category->articles->sortByDesc('created_at')->filter(function($article){
-            return $article->is_Accepted == true;
-        });
+        $articles = $category->articles->sortByDesc('created_at')->where('is_accepted',true);
         return view('article.by-category', compact('category', 'articles')); 
     }
 
