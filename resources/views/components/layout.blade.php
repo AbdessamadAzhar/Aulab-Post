@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital@1&display=swap" rel="stylesheet">
      @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <title>OneClick</title>
+    <title>Aulab Post</title>
 </head>
 
 <body>
