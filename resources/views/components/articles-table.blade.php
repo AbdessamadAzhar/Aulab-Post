@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($Articles as $article)
+        @foreach ($articles as $article)
             <tr>
                 <th scope="row">{{ $article->id }}</th>
                 <td>{{ $article->title }}</td>
@@ -19,7 +19,7 @@
                     @if (is_null($article->is_accepted))
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">leggi l'articolo</a>
                     @else
-                        <a href="{{route('revisor.undoArticle')}}" class="btn btn-info text-white">Riporta in revisione</a>
+                        <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Riporta in revisione</a>
                     @endif
 
                 </td>

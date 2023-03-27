@@ -16,7 +16,7 @@
             </div>
             <hr>
             <p>{{ $article->body }}</p>
-            @if (Auth::user($article->is_revisor))
+            @if (Auth::user() && Auth::user()->is_revisor)
                 <a href="{{ route('revisor.acceptArticle', compact('article')) }}"class="btn btn-success text-white my-5">Accetta
                     l'articolo</a>
                 <a

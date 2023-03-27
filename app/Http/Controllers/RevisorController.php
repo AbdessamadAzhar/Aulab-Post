@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 class RevisorController extends Controller
 {
-    
+    public function __construct(){
+        $this->middleware('revisor');
+    }
     
     public function dashboard()
     {
@@ -18,30 +20,30 @@ class RevisorController extends Controller
         return view('revisor.dashboard', compact('unrevisionedArticles', 'acceptedArticles', 'rejectedArticles'));
     }
 
-    public function acceptArticle(Article $articles)
-    {
-        $articles->update([
+    public function acceptArticle(Article $article)
+    {        
+        $article->update([
             'is_accepted' => true,
         ]);
         
-        return view('revisor.dashboard', compact('message', 'Hai accettato l\'articolo scelto'));
+        return redirect(route('revisor.dashboard'))->with('message', 'Hai accettato l\'articolo scelto');
     }
 
-    public function rejectArticle(Article $articles)
+    public function rejectArticle(Article $article)
     {
-        $articles->update([
+        $article->update([
             'is_accepted' => false,
         ]);
         
-        return view('revisor.dashboard', compact('message', 'Hai rifiutato l\'articolo scelto'));
+        return redirect(route('revisor.dashboard'))->with('message', 'Hai rifiutato l\'articolo scelto');
     }
 
-    public function undoArticle(Article $articles)
+    public function undoArticle(Article $article)
     {
-        $articles->update([
-            'is_accepted' => false,
+        $article->update([
+            'is_accepted' => null,
         ]);
         
-        return view('revisor.dashboard', compact('message', 'Hai riportato di nuovo l\'articolo scelto in revisione'));
+        return redirect(route('revisor.dashboard'))->with('message', 'Hai riportato di nuovo l\'articolo scelto in revisione');
     }
 }

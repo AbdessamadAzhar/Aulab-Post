@@ -13,7 +13,7 @@
         <div class="row justify-content-conter">
             <div class="col-12">
                 <h2>Articoli da revisionare</h2>
-                <x-articles-table :roleRequests="$unrevisionedArticles" />
+                <x-articles-table :articles="$unrevisionedArticles" />
             </div>
         </div>
 
@@ -21,7 +21,7 @@
             <div class="row justify-content-conter">
                 <div class="col-12">
                     <h2>Articoli pubblicati</h2>
-                    <x-requests-table :roleRequests="$acceptedArticles"/>
+                    <x-articles-table :articles="$acceptedArticles"/>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
                 <div class="row justify-content-conter">
                     <div class="col-12">
                         <h2>Articoli respinti</h2>
-                        <x-requests-table :roleRequests="$rejectedArticles"/>
+                        <x-articles-table :articles="$rejectedArticles"/>
                     </div>
                 </div>
             </div>
