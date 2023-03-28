@@ -31,12 +31,12 @@
             @endforeach 
             
             <p class="small fst-italic text-capitalize">
-            @foreach($article->tags as tag)
+            @foreach($article->tags as $tag)
                 #{{$tag->name}}
             @endforeach
             </p>
             @if($article->category)
-                <a href="{{route('article.byCategory', ['category' => $article->category->id]}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+                <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
             @else
                 <p class="small text-muted fst-italic text-capitalize">
                     Non categorizzato

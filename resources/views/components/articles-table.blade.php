@@ -5,7 +5,7 @@
             <th dcope="col">Titolo</th>
             <th dcope="col">Sottotitolo</th>
             <th dcope="col">Redattore</th>
-            <th dcope="col">Azioni</th>
+            <th dcope="col">Azioni</th>s
         </tr>
     </thead>
     <tbody>
