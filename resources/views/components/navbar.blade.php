@@ -17,6 +17,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('careers') }}">Lavora con noi </a>
                 </li>
+
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
@@ -42,6 +43,7 @@
                                 @csrf
                             </form>
 
+
                         </ul>
                     </li>
                 @endauth
@@ -57,8 +59,13 @@
                         </ul>
                     </li>
                 @endguest
+                <form class="d-block rounded float-end "method="GET" action="{{ route('article.search') }}">
+                    <input class="form-controll" type="search" name="query" placeholder="Cosa stai cercando?"
+                        aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Cerca</button>
+                </form>
             </ul>
-            
+
         </div>
     </div>
 </nav>
