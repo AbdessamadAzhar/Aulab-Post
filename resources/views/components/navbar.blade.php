@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg header larafont">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark">
-            <img src="./logo.png" width="80">
+        <a class="navbar-brand text-dark" href="/">
+            <img src="/media/logo.png" alt="logo" width="30" height="24">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
