@@ -1,15 +1,16 @@
 <nav class="navbar navbar-expand-lg header larafont">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('homepage') }}">Aulab Post
-            <img src="./media/arrow_mouse/200" alt=""></a>
+        <a class="navbar-brand text-dark">
+            <img src="./logo.png" width="80">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 tx-3">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
+                    <a class="nav-link " aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.create') }}">Inserisci un articolo</a>
@@ -20,7 +21,7 @@
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
+                        <a class="nav-link dropdown-toggle tx-3" href="#" id="navbardropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
@@ -49,7 +50,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Benvenuto ospite
+                            <i class="bi bi-person-circle text-dark" height = 90 ></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
@@ -57,10 +58,12 @@
                         </ul>
                     </li>
                 @endguest
-                <form class="d-flex " method="GET" action="{{ route('article.search') }}">
-                    <input class="form-controll" type="search" name="query" placeholder="Cosa stai cercando?"
+                <form class="d-inline-flex" method="GET" action="{{ route('article.search') }}">
+                    <input class="form-control" type="search" name="query" placeholder="Cosa stai cercando?"
                         aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Cerca</button>
+                    <button class="btn btn-outline-success" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </form>
             </ul>
 

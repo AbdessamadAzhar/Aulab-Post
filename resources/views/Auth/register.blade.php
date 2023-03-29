@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid p-5 header  text-center ">
         <div class="row justify-content-center">
-            <h1 class="display-5 tx-4">
+            <h1 class="display-1 tx-2">
                 Registrati
             </h1>
         </div>
