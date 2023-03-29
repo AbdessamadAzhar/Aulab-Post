@@ -69,7 +69,7 @@ class AdminController extends Controller
 
     public function editCategory(Request $request, Category $category){
       $request->validate([
-        'name' => 'require|unique:categories',
+        'name' => 'required|unique:categories',
       ]);
 
       $category->update([
