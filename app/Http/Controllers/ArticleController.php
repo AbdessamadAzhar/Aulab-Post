@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -42,13 +43,14 @@ class ArticleController extends Controller
             'title' =>'required|unique:articles|min:5',
             'subtitle' =>'required|unique:articles|min:5',
             'body' =>'required|min:10',
+            'image' => 'image|required',
             'category' =>'required',
             'tags' =>'required',
 
         ]);
 
 
-        Article::create([
+        $article = Article::create([
             'title' =>$request->title,
             'subtitle' =>$request->subtitle,
             'body' => $request->body,

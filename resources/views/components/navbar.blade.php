@@ -42,8 +42,6 @@
                             <form method="post" action="{{ route('logout') }}" id="form-logout" class="d-none">
                                 @csrf
                             </form>
-
-
                         </ul>
                     </li>
                 @endauth
@@ -59,7 +57,7 @@
                         </ul>
                     </li>
                 @endguest
-                <form class="d-flex" method="GET" action="{{ route('article.search') }}">
+                <form class="d-flex " method="GET" action="{{ route('article.search') }}">
                     <input class="form-controll" type="search" name="query" placeholder="Cosa stai cercando?"
                         aria-label="Search">
                     <button class="btn btn-outline-info" type="submit">Cerca</button>
