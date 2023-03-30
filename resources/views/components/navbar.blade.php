@@ -34,7 +34,7 @@
                                         revisore</a></li>
                             @endif
                             @if (Auth::user()->is_writer)
-                            <li><a class="dropdown-item"href="{{ route('revisor.dashboard') }}">Dashboard Del
+                            <li><a class="dropdown-item"href="{{ route('writer.dashboard') }}">Dashboard Del
                                     redattore</a></li>
                         @endif
                             <li>
