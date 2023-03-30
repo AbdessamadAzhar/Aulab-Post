@@ -82,7 +82,7 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">Abd</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
@@ -103,7 +103,7 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">Massimo</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
@@ -124,7 +124,7 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">Gianni</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
@@ -145,7 +145,7 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">Roberto</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
