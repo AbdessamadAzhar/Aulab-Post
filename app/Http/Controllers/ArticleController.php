@@ -57,6 +57,7 @@ class ArticleController extends Controller
             'image' =>$request->file('image')->store('public/images'),
             'category_id' => $request->category,
             'user_id' => Auth::user()->id,
+            'slug' => Str::slug($request->title),
         ]);
 
         $tags = explode(' , ', $request->tags);
@@ -94,7 +95,13 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $article->update([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'category_id' => $request->category,
+            'slug' => Str::slug($request->title),
+        ]);
     }
 
     /**
@@ -102,7 +109,13 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        foreach($article->tags as $tag){
+            $article->tags()->detach($tag);
+        }
+
+        $article->delete();
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente cancellato l\'articolo scelto');
     }
     public function byCategory(Category $category){
         $articles = $category->articles->sortByDesc('created_at')->where('is_accepted',true);

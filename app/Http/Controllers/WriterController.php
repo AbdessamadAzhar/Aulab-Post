@@ -16,4 +16,52 @@ class WriterController extends Controller
         
         return view('writer.dashboard', compact('acceptedArticles', 'rejectedArticles','unrevisionedArticles'));
     }
+
+    public function update(Request $request, Article $article)
+    {
+
+        $request->validate([
+            'title' => 'required|min:5|unique:articles,title, ' . $article->id,
+            'subtitle' => 'required|min:5|unique:articles,subtitle, ' . $article->id,
+            'body' => 'required|min:10',
+            'image' => 'image',
+            'category' => 'required',
+            'tags' => 'required',
+        ]);
+
+        $article->update([
+
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'category_id' => $request->category,
+        ]);
+
+        if($request->image){
+            Storage::delete($article->image);
+            $article->update([
+                'image' => $request->file('image')->store('public/images'),
+            ]);
+        }
+
+              
+    $tags = explode(', ' , $request->tags);
+    $newTags = [];
+
+    foreach($tags as $tag){
+        $newTag = Tag::updateOrCreate([
+            'name' => $tag,
+        ]);
+        $newTags[] = $newTag->id;
+    }
+
+
+    $article->tags()->sync($newTags);
+    
+    return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
+
+
+    }
+
+  
 }

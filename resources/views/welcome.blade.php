@@ -37,11 +37,21 @@
                                     Non categorizzato
                                 </p>
                             @endif
+
+                            <span class="text-muted small fst-italic">- tempo di lettura{{$article->readDuration()}} min</span>
+                            <hr>
+                            <p class="small fst-italic text-capitalize">
+                                @foreach($article->tags as $tag)
+                                    #{{$tag->name}}
+                                @endforeach
+                            </p>
                     </div>
+                        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+                            <a class="" href="{{route('article.byUser', ['user' => $article->user->id])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
+                            <a href="{{route('article.show',compact('article'))}}" class="btn btn-info text-white">leggi</a>
+                        </div>
                 </div>
             @endforeach
-
-            
         </div>
     </div> 
 
