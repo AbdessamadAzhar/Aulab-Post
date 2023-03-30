@@ -1,14 +1,13 @@
 <nav class="navbar navbar-expand-lg header larafont">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark" href="/">
-            <img src="/media/logo.png" alt="logo" width="30" height="24">
+        <a class="navbar-brand text-dark" href="/">Aulab Post!
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 tx-3">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
@@ -21,7 +20,7 @@
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle tx-3" href="#" id="navbardropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Benvenuto {{ Auth::user()->name }}
                         </a>
@@ -34,6 +33,10 @@
                                 <li><a class="dropdown-item"href="{{ route('revisor.dashboard') }}">Dashboard Del
                                         revisore</a></li>
                             @endif
+                            @if (Auth::user()->is_writer)
+                            <li><a class="dropdown-item"href="{{ route('revisor.dashboard') }}">Dashboard Del
+                                    redattore</a></li>
+                        @endif
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
