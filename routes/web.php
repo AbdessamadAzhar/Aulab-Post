@@ -21,12 +21,11 @@ use App\Http\Controllers\WriterController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
-
 //route articolo
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
-Route::get('article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/category/{category}',[ArticleController::class,'byCategory'])->name('article.byCategory');
 Route::get('/article/user/{user}',[ArticleController::class,'byUser'])->name('article.byUser');
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
@@ -66,8 +65,6 @@ Route::middleware('writer')->group(function(){
     Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
     Route::get('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
     Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
-    Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
-   
-
-        
+    
+           
 });

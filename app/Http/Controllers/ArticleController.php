@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Tag;
+
 use App\Models\User;
+
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Auth;
