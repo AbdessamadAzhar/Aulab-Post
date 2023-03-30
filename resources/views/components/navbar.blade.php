@@ -34,9 +34,9 @@
                                         revisore</a></li>
                             @endif
                             @if (Auth::user()->is_writer)
-                            <li><a class="dropdown-item"href="{{ route('writer.dashboard') }}">Dashboard Del
-                                    redattore</a></li>
-                        @endif
+                                <li><a class="dropdown-item"href="{{ route('writer.dashboard') }}">Dashboard Del
+                                        redattore</a></li>
+                            @endif
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -53,7 +53,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle text-dark" height = 90 ></i>
+                            <i class="bi bi-person-circle text-dark" height=90></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
@@ -61,7 +61,9 @@
                         </ul>
                     </li>
                 @endguest
-                <form class="d-inline-flex" method="GET" action="{{ route('article.search') }}">
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <form class="d-flex" method="GET" action="{{ route('article.search') }}">
                     <input class="form-control" type="search" name="query" placeholder="Cosa stai cercando?"
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">
@@ -69,7 +71,6 @@
                     </button>
                 </form>
             </ul>
-
         </div>
     </div>
 </nav>

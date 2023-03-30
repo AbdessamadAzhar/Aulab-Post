@@ -51,10 +51,14 @@
                 @endif
             </tr>
         @endforeach
-        <form class="d-flex" action="{{ route('admin.storeCategory') }}" method="POST">
-            @csrf
-            <input type="text" name="name" class="form-control me-2" placeholder="Inserisci una nuova categoria">
-            <button type="submit" class="btn btn-success text-white">Aggiungi</button>
-        </form>
+        @if ($metaType == 'categorie')
+            <form class="d-flex" action="{{ route('admin.storeCategory') }}" method="POST">
+                @csrf
+                <input type="text" name="name" class="form-control me-2"
+                    placeholder="Inserisci una nuova categoria">
+                <button type="submit" class="btn btn-success text-white">Aggiungi</button>
+            </form>
+        @endif
+
     </tbody>
 </table>
