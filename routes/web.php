@@ -69,4 +69,3 @@ Route::middleware('writer')->group(function(){
 
         
 });
-
