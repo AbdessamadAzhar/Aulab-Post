@@ -61,21 +61,7 @@
           <!--Grid row-->
         </form>
       </section>
-      <!-- Section: Form -->
-  
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-  
+      <!-- Section: Form -->  
       <!-- Section: Links -->
       <section class="">
         <!--Grid row-->
@@ -83,84 +69,24 @@
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Abby</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
           </div>
           <!--Grid column-->
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Massimo</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
           </div>
           <!--Grid column-->
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Gianni</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
           </div>
           <!--Grid column-->
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Roberto</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
           </div>
           <!--Grid column-->
         </div>

@@ -2,7 +2,7 @@
     <div class="container-fluid p-5 header text-center text-white">
         <div class="row justify-content-center">
             <h1 class="display-1 tx-2">
-                Tutti gli articoli per: {{$query}}
+                Tutti gli articoli per: {{ $query }}
             </h1>
         </div>
     </div>
@@ -21,49 +21,18 @@
                             <a href="{{ route('article.byUser', ['user' => $article->user->id]) }}"
                                 class="small text-muted fst-italic text capitalize">{{ $article->user->name }}</a>
                         </div>
+                        <p class="small fst-italic text-capitalize">
+                            @foreach ($article->tags as $tag)
+                                #{{ $tag->name }}
+                            @endforeach
+                        </p>
                         <div class="card-footer text-muted d-flex justify-content-beetween align-items-center">
                             Redatto il {{ $article->created_at->format('d/m/y') }} da {{ $article->user->name }}
                             <a href="{{ route('article.show', compact('article')) }}"
                                 class="btn btn-info text-white">Leggi</a>
                         </div>
-                        <p class="small fst-italic text-capitalize">
-                            @foreach($article->tags as $tag)
-                                #{{$tag->name}}
-                            @endforeach
-                            </p>
-                            @if($article->category)
-                                <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
-                            @else
-                                <p class="small text-muted fst-italic text-capitalize">
-                                    Non categorizzato
-                                </p>
-                            @endif
-
-                            <span class="text-muted small fst-italic">- tempo di lettura{{$article->readDuration()}} min</span>
-                            <hr>
-                            <p class="small fst-italic text-capitalize">
-                                @foreach($article->tags as $tag)
-                                    #{{$tag->name}}
-                                @endforeach
-                            </p>
-                    </div>
-                        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                            <a class="" href="{{route('article.byUser', ['user' => $article->user->id])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
-                            <a href="{{route('article.show',compact('article'))}}" class="btn btn-info text-white">leggi</a>
-                        </div>
-                </div>
-
-
-
-
                     </div>
                 </div>
-            @endforeach 
-            
-            
-            
+            @endforeach
         </div>
-    </div>
-
-
 </x-layout>
