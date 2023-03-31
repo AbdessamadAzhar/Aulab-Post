@@ -63,7 +63,7 @@ Route::middleware('writer')->group(function(){
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
     Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
-    Route::get('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+    Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
     Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
     
            

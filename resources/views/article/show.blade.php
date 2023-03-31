@@ -17,8 +17,15 @@
             <hr>
             <p>{{ $article->body }}</p>
             @if (Auth::user() && Auth::user()->is_revisor)
-                <a href="{{ route('revisor.acceptArticle', compact('article')) }}"class="btn btn-success text-white my-5">Accetta
+                <a href="{{ route('revisor.acceptArticle', compact('article')) }}"class="btn btn-success text-white ">Accetta
                     l'articolo</a>
+                <a href="{{ route('article.edit', compact('article')) }}" class="btn btn-warning mt-2">Modifica
+                    l'articolo</a>
+                <form method='POST'action="{{ route('article.destroy', compact('article')) }}">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger text-white mt-3">Cancella l'articolo</button>
+                </form>
                 <a
                     href="{{ route('revisor.rejectArticle', compact('article')) }}"class="btn btn-danger text-white my-5">Rifiuta
                     l'articolo</a>
