@@ -1,11 +1,15 @@
 body{
-    background-color:  #6db784;
+    background-color: #A1FFCF;
     
 }
 
 .header{
-    background-color:  #1b4d89;
+    background-color:  #f3f6f4 ;
     
+}
+
+nav{
+    background-color:  #007FFF;
 }
 .montfont {
     font-family: 'Montserrat', sans-serif;
@@ -17,13 +21,13 @@ body{
 
 
 :root {
-    --c-1: #1b4d89;
+    --c-1: #007FFF;
 
     --c-2: #f9e45b;
 
-    --c-3: #6db784;
+    --c-3: #A1FFCF;
 
-    --c-4: #ffffff;
+    --c-4:#f3f6f4  ;
 }
 
 .tx-1 {

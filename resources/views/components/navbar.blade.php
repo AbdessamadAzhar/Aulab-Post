@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg header larafont">
+<nav class="navbar navbar-expand-lg nav larafont">
     <div class="container-fluid">
         <a class="navbar-brand text-dark" href="/">Aulab Post!
         </a>
