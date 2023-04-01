@@ -6,7 +6,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form class="card p-5 shadow" method="POST" action="{{ route('article.update', compact('article')) }}"
+                <form class="p-5 border shadow" method="POST" action="{{ route('article.update', compact('article')) }}"
                     enctype="multipart/form-data">
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -25,12 +25,12 @@
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo:</label>
                         <input type="text" name="title" id="title" class="form-control"
-                            value="{{ old('title') }}">
+                            value="{{$article->title}}">
                     </div>
                     <div class="mb-3">
                         <label for="subtitle" class="form-label">Sottotitolo:</label>
                         <input type="text" name="subtitle" id="subtitle" class="form-control"
-                            value="{{ old('subtitle') }}">
+                        value="{{$article->subtitle}}">
                     </div>
                     <div class="mt-3 text-center">
                         <label for="existing-image" class="form-label">Immagine attuale:</label>

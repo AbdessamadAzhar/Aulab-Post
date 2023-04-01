@@ -75,7 +75,7 @@ class ArticleController extends Controller
             }
 
 
-        return redirect(route('homepage'))->with('message', 'Articolo creato correttamente');
+        return redirect(route('article.index'))->with('message', 'Articolo creato correttamente');
 
     }
 
