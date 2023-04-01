@@ -56,8 +56,6 @@
                         <button class="btn btn-info text-white">Inserisci un articolo</button>
                         <a class="btn btn-outline-info" href="{{route('homepage')}}">Torna alla home</a></p>
                     </div>
-
-
                 </form>
             </div>
         </div>

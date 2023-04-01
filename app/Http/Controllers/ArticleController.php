@@ -75,7 +75,7 @@ class ArticleController extends Controller
             }
 
 
-        return redirect(route('article.index'))->with('message', 'Articolo creato correttamente');
+        return redirect(route('homepage'))->with('message', 'Articolo creato correttamente');
 
     }
 
@@ -101,8 +101,8 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         $request->validate([
-            'title'=> 'required|min:5|unique:articles,title',  $article->id,
-            'subtitle'=> 'required|min:5|unique:articles,subtitle', $article->id,
+            'title'=> 'required|min:5|unique:articles,title,' . $article->id,
+            'subtitle'=> 'required|min:5|unique:articles,subtitle,'. $article->id,
             'body' => 'required|min:10',
             'image' => 'image',
             'category' => 'required',
@@ -119,8 +119,8 @@ class ArticleController extends Controller
  
         if($request->image){
             Storage::delete($article->image);
-            $article->upadate([
-                'image' => $request->file('image')->store('pubblic/images'),
+            $article->update([
+                'image' => $request->file('image')->store('public/images'),
             ]);
         }
         $tags = explode(',', $request->tags);

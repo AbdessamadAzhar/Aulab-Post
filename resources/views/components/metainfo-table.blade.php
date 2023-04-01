@@ -38,7 +38,7 @@
                             @method('put')
                             <input type="text" name="name" placeholder="Nuovo nome categoria"
                                 class="form-control w-50 d-inline">
-                            <button type="submit" class="btn btn-danger text-white">Aggiorna</button>
+                            <button type="submit" class="btn btn-warning text-white">Aggiorna</button>
                         </form>
                     </td>
                     <td>
