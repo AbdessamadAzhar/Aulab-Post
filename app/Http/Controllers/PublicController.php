@@ -33,7 +33,7 @@ class PublicController extends Controller
         $request->validate([
 
             'role' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'message' => 'required',
         ]);
 
@@ -47,12 +47,15 @@ class PublicController extends Controller
         switch ($role) {
             case 'admin':
                 $user->is_admin = Null;
+                break;
 
             case 'revisor':
                 $user->is_revisor = Null;
+                break;
 
             case 'writer':
                 $user->is_writer = Null;
+                break;
         }
 
          $user->update();

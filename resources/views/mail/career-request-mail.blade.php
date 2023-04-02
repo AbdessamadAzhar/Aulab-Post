@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Abbiamo ricevuto una richieste</h1>
+    <h1>Abbiamo ricevuto una richiesta</h1>
     <h4>Richiesta per il ruolo di {{$info['role']}}</h4>
     <p>Ricevuta da {{$info['email']}}</p>
 

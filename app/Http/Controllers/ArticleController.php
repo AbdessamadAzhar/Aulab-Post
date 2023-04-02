@@ -11,7 +11,6 @@ use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -115,6 +114,7 @@ class ArticleController extends Controller
             'subtitle' =>$request->subtitle,
             'body' => $request->body,
             'category_id' => $request->category,
+            'slug'=>Str::slug($request->title),
         ]);
  
         if($request->image){
