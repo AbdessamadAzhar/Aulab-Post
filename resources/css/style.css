@@ -78,7 +78,7 @@ nav{
 .slide2 {
     height: 100vh;
     width: 100%;
-    background-image: url("/resources/views/media/gardenia.jpeg");
+    background-image: url("/resources/views/media/linea\ verde.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -90,7 +90,7 @@ nav{
 .slide3 {
     height: 100vh;
     width: 100%;
-    background-image: url("/resources/views/media/linea\ verde.jpeg");
+    background-image: url("/resources/views/media/linea\ bianca.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -102,7 +102,7 @@ nav{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--c-4);
+    background-color: var(--c-1);
 }
 
 
