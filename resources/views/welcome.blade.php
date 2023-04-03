@@ -40,7 +40,7 @@
             </div>
         </div>
         <x-header>
-            Ultime aggiunte
+            Ultimi annunci
         </x-header>
 
         <div class="container my-5">
