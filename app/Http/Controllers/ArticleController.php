@@ -113,6 +113,7 @@ class ArticleController extends Controller
             'title' =>$request->title,
             'subtitle' =>$request->subtitle,
             'body' => $request->body,
+            'is_accepted' => null,
             'category_id' => $request->category,
             'slug'=>Str::slug($request->title),
         ]);
@@ -149,6 +150,11 @@ class ArticleController extends Controller
         }
 
         $article->delete();
+
+        
+        if($article->image){
+            Storage::delete($article->image);
+        }
 
         return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente cancellato l\'articolo scelto');
     }
